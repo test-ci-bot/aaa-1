@@ -1,8 +1,7 @@
 pipeline:
 
   frontend:
-     environment:
-      - DOCKER_HOST=35.192.55.117
+   
 
     image: java:8
     image: maven:3.5.3
@@ -12,6 +11,7 @@ pipeline:
       - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
       - ls -ltr
       - ls -ltr ./target
-      
+     environment:
+      - DOCKER_HOST=35.192.55.117   
      
      
