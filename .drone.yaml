@@ -8,3 +8,4 @@ pipeline:
       - mvn clean -B -e -U deploy -Dmaven.test.skip=false -P openshift
       - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare
      
+     
