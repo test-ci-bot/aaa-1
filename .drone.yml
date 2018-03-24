@@ -9,7 +9,7 @@ pipeline:
       - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
       - ls -ltr
       - ls -ltr ./target
-      env:
-      - DOCKER_HOST=35.192.55.117 
+    env:
+      - DOCKER_HOST=35.192.55.117
      
      
