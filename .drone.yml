@@ -4,9 +4,9 @@ pipeline:
     image: java:8
     image: maven:3.5.3
     commands:
-      - mvn org.codehaus.mojo:versions-maven-plugin:2.2:set -Ddocker.host="tcp://127.0.0.1:5000"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -U -DnewVersion=1.0.3
-      - mvn clean -B -e -U deploy -Dmaven.test.skip=false  -Ddocker.host="tcp://127.0.0.1:5000"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -P openshift
-      - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare -Ddocker.host="tcp://127.0.0.1:5000"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
+      - mvn org.codehaus.mojo:versions-maven-plugin:2.2:set -Ddocker.host="unix://var/run/docker.sock"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -U -DnewVersion=1.0.3
+      - mvn clean -B -e -U deploy -Dmaven.test.skip=false  -Ddocker.host="unix://var/run/docker.sock"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -P openshift
+      - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare -Ddocker.host="unix://var/run/docker.sock"  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
       - ls -ltr
       - ls -ltr ./target
       
