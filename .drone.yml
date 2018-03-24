@@ -9,5 +9,6 @@ pipeline:
       - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare
       - ls -ltr
       - ls -ltr ./target
+      
      
      
