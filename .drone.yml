@@ -6,7 +6,7 @@ pipeline:
     commands:
       -  mvn org.codehaus.mojo:versions-maven-plugin:2.2:set  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -U -DnewVersion=1.0.3
       - mvn clean -B -e -U deploy -Dmaven.test.skip=false   -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn  -P openshift
-      - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare        -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
+      - mvn io.github.stackinfo:stackinfo-maven-plugin:0.2:prepare         -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn 
      
      
         
