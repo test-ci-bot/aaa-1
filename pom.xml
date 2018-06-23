@@ -13,6 +13,9 @@
   
   
   
+  
+  
+  
   <name>Vert.x - HTTP</name>
   <description>Exposes an HTTP API using Vert.x</description>
 
