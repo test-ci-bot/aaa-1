@@ -1,6 +1,6 @@
 pipeline:
 
-
+    
   frontend:      
     image: java:8
     image: maven:3.5.3
